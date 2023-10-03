@@ -55,15 +55,6 @@
 		    	<param name="message"></param>	
 		</action>
 		
-		<action name="RegisterAjaxAction" class="userSystem.action.RegisterAjaxAction">
-		<!-- 定义逻辑视图和物理资源之间的映射 -->
-		  	<result name="notBlank">/WEB-INF/view/register.jsp</result>
-		  		<param name="message" >message</param>
-		    <result name="registered">/WEB-INF/view/register.jsp</result>
-		    	<param name="message">message</param>
-		    <result name="OK">/WEB-INF/view/register.jsp</result>
-		    	<param name="message">message</param>	
-		</action>
 
 	</package>
     

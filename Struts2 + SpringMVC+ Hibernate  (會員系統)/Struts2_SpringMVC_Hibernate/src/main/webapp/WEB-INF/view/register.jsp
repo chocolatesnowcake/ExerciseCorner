@@ -9,26 +9,6 @@
 <meta charset="UTF-8">
 <title>註冊會員</title>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script>
-	function userAccount(){
-	    $.post({
-        url:"${pageContext.request.contextPath}/RegisterAjaxAction",
-	        data:{'account':$("#account").val()},
-	        success:function (data) {
-	        	if ("message=='OK'"){
-                }else {
-                }
-	        	$("#accountInfo").html(data);
-	        }
-	    });
-	}
-	<!-- https://blog.csdn.net/sinat_33087001/article/details/120228438 SpringMVC + ajax 範例 -->
-    <!-- 按鈕發送控制參考: https://blog.51cto.com/u_3664660/3213878 -->
-
-</script>
-
-
 <style>
 span{color:red;}
 html, body{height:100%;}
