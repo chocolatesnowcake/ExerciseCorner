@@ -1,0 +1,12 @@
+<Context>
+   <Resource name="mail/Session" auth="Container"
+             type="javax.mail.Session"
+             mail.smtp.host="smtp.163.com" mail.smtp.auth="true"
+             mail.smtps.ssl.enable="true"
+             mail.smtp.starttls.enable="true"
+             mail.smtp.starttls.required="true"
+             mail.smtp.ssl.trust="smtp.163.com"
+             mail.debug="true"
+             mail.debug.auth="true"
+             />
+</Context>

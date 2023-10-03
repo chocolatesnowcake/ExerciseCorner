@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+</beans>
+
+<!-- 
+https://openhome.cc/Gossip/CodeData/JavaTutorial/SpringWebMVC.html
+
+<context:component-scan base-package="tw.codedata" /> 告訴 spring-webmvc，要掃描 base-package 下，
+是否有被相關標註（Annotation）設定為元件的類別，這樣的話，你就不用寫一堆 XML 設定檔，對於快速開發會有所助益；
+
+設定 InternalResourceViewResolver 的話，你只要傳回 "hello" 字串，InternalResourceViewResolver 會自動
+根據 prefix 與 suffix 設定，得知目前實際上要以 "/hello.jsp" 來進行畫面回應，將來若想要改為其他回應技術，就只需要修改 XML 檔案。
+ -->

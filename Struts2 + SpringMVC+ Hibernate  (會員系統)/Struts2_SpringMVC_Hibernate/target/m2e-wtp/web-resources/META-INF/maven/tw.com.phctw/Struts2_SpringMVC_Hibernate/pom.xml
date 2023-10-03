@@ -1,0 +1,218 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tw.com.phctw</groupId>
+  <artifactId>Struts2_SpringMVC_Hibernate</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Struts2_SpringMVC_Hibernate Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+	  <!-- jackson包引入-->
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+		<version>2.12.1</version>
+	</dependency>
+	<!-- struts2零配置依賴 -->
+	<dependency>
+		<groupId>org.apache.struts</groupId>
+		<artifactId>struts2-convention-plugin</artifactId>
+		<version>2.3.4</version>
+		<type>jar</type>
+		<scope>compile</scope>
+	</dependency>
+	  
+	<!-- struts2核心依賴 -->
+	<dependency>
+		<groupId>org.apache.struts</groupId>
+		<artifactId>struts2-core</artifactId>
+		<version>2.5.5</version>
+		<type>jar</type>
+		<scope>compile</scope>
+	</dependency>
+	<!-- struts2的json依賴 -->
+	<dependency>
+	    <groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-json-plugin</artifactId>
+	    <version>2.5.5</version>
+	    <type>jar</type>
+		<scope>compile</scope>
+	</dependency>
+	  
+	<!--Apache Struts 2.5 with no Struts config XML file example https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Apache-Struts-25-example-with-no-Struts-config-xml-file--> 
+	<!-- javamail -->
+	<dependency>
+		<groupId>javax.mail</groupId>
+		<artifactId>mail</artifactId>
+		<version>1.4.7</version>
+		<scope>provided</scope><!-- 仅编译的时候使用，运行是由tomcat提供 -->
+	</dependency>
+	
+	<!-- Struts2框架 -->
+	<dependency>
+		<groupId>org.apache.struts</groupId>
+		<artifactId>struts2-core</artifactId>
+		<version>2.5.5</version>
+	</dependency>
+	
+	<!-- Struts2和Spring整合插件 -->
+	<dependency>
+		<groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-spring-plugin</artifactId>
+	    <version>2.5.5</version>
+    </dependency>
+	  <dependency>
+	    <groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-convention-plugin</artifactId>
+	    <version>2.5.10</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>3.1.0</version>
+	  </dependency>
+	  
+	  <dependency>
+	    <groupId>javax.xml.bind</groupId>
+	    <artifactId>jaxb-api</artifactId>
+	    <version>2.3.0</version>
+	</dependency>
+	<dependency>
+	  <groupId>com.sun.xml.bind</groupId>
+	  <artifactId>jaxb-core</artifactId>
+	  <version>2.2.11</version>
+	</dependency>
+	<dependency>
+	  <groupId>com.sun.xml.bind</groupId>
+	  <artifactId>jaxb-impl</artifactId>
+	<version>2.3.2</version>
+	</dependency>
+	<dependency>
+	  <groupId>javax.activation</groupId>
+	  <artifactId>activation</artifactId>
+	  <version>1.1.1</version>
+	</dependency>
+	
+	<!-- jackson包引入-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.1</version>
+        </dependency>
+	  
+	  <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.2.2.RELEASE</version>
+ 	</dependency>
+ 	
+ 	<dependency>
+		 <groupId>org.projectlombok</groupId>
+		 <artifactId>lombok</artifactId>
+		 <version>1.18.28</version>
+	 </dependency>	  
+  <!--JSP相关依赖-->
+    <dependency>
+        <groupId>javax.servlet.jsp</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>2.2</version>
+    </dependency>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jstl</artifactId>
+        <version>1.2</version>
+    </dependency>
+	  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>4.2.2.RELEASE</version>
+	</dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>4.2.2.RELEASE</version>
+    </dependency>
+    <!-- spring transaction manager -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>4.2.2.RELEASE</version>
+    </dependency>
+    <!-- spring jdbc -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.2.2.RELEASE</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aop</artifactId>
+	    <version>4.2.2.RELEASE</version>
+	</dependency>
+
+    
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>4.2.2.RELEASE</version>
+    </dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>4.2.2.RELEASE</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>4.2.2.RELEASE</version>
+	</dependency>
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.33</version>
+    </dependency>
+    <!-- Hibernate -->
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.2.12.Final</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>5.2.12.Final</version>
+    </dependency>
+
+    <dependency>
+    	<groupId>tw.com.phctw</groupId>
+    	<artifactId>SpringMVC_Hibernate</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>Struts2_SpringMVC_Hibernate</finalName>
+  </build>
+</project>
