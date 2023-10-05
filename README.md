@@ -222,7 +222,7 @@ public class InsertStudentServlet extends HttpServlet {
 ![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069202065_0.jpg)
 
 **3. showStudent.jsp (顯示資料庫已建立的資料)**
-![image]((https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069221027_0.jpg)
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069221027_0.jpg)
 
 
 
