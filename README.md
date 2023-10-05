@@ -210,11 +210,15 @@ public class InsertStudentServlet extends HttpServlet {
 實現上萬筆隨機產生學生資料建檔，並可查詢建立的學生資料、顯示於網頁上面。
 
 **1. index.jsp (首頁)**
+
 ![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069162806_0.jpg)
+
 **2. insertStudent.jsp (輸入數字前)**
+
 ![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069186117_0.jpg)
 
 **2. insertStudent.jsp (輸入數字後)**
+
 ![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069202065_0.jpg)
 
 **3. showStudent.jsp (顯示資料庫已建立的資料)**
