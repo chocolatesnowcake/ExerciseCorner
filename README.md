@@ -123,7 +123,7 @@ while(rs.next()) {
 * M：model 模型，負責和資料庫溝通， Model 管理的功能層被稱做「邏輯層」，更明確一點說，是和「商業邏輯」有關的功能。
 * V：view 視圖，View 所管理的功能層叫作「表現層 (presentation layer)」，顧名思義是負責管理畫面的呈現。
 * C: controller 控制器，掌握使用者互動邏輯，也是應用程式收發 request/response 的核心。來自路由的 request 會先被送到 Controller，再由 Controller 通知 Model 調度資料，並且把資料傳遞給 View 來產生樣板 (template)，並將呈現資料的 HTML 頁面回傳給客戶端。
-![]([https://hackmd.io/_uploads/HyqkqOBl6.jpg](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696070107768.jpg))
+![](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696070107768.jpg)
  
 參考資料: https://tw.alphacamp.co/blog/mvc-model-view-controller
 
@@ -210,15 +210,15 @@ public class InsertStudentServlet extends HttpServlet {
 實現上萬筆隨機產生學生資料建檔，並可查詢建立的學生資料、顯示於網頁上面。
 
 **1. index.jsp (首頁)**
-![]([https://hackmd.io/_uploads/S1HFD9iea.jpg](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069162806_0.jpg))
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069162806_0.jpg)
 **2. insertStudent.jsp (輸入數字前)**
-![]([https://hackmd.io/_uploads/H1Ttvqsea.jpg](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069186117_0.jpg))
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069186117_0.jpg)
 
 **2. insertStudent.jsp (輸入數字後)**
-![]([https://hackmd.io/_uploads/HJVcD9sep.jpg](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069202065_0.jpg)https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069202065_0.jpg)
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069202065_0.jpg)
 
 **3. showStudent.jsp (顯示資料庫已建立的資料)**
-![]([https://hackmd.io/_uploads/rypcv5oga.jpg](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069221027_0.jpg)https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069221027_0.jpg)
+![image]((https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069221027_0.jpg)
 
 
 
