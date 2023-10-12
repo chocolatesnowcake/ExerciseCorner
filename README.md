@@ -239,6 +239,8 @@ public class InsertStudentServlet extends HttpServlet {
 
 **Spring MVC 的運作方式**
 
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1_TejeUv77UN6ExNQzgpKPsw.webp)
+
 * 建立SpringMVC 專案資料參考: https://dotblogs.com.tw/raylee/2019/04/15/143704#google_vignette
 * 其他資料參考: 
 https://openhome.cc/Gossip/SpringGossip/FirstSpringMVC.html 、 https://medium.com/%E5%B7%A5%E7%A8%8B%E7%8D%85%E6%97%A5%E5%B8%B8/spring-spring-mvc-spring-boot%E6%AF%94%E8%BC%83-6494107261f3 、 https://hackmd.io/@LeeLo/leelo
@@ -361,3 +363,34 @@ public class UserController {
 	
 }	
 ```
+
+**1. index.jsp (首頁)**
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697078959529.jpg)
+
+**2-1. userLogin.jsp (登入頁)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697078978179.jpg)
+
+**2-2. userLoginSuccess.jsp (登入後會員資料顯示頁)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079236054.jpg)
+
+**3-1. userForgotPassword.jsp (忘記密碼頁)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079009921.jpg)
+
+**3-2. userForgotPassword.jsp (忘記密碼信件)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079095254.jpg)
+
+**4-1. userRegister.jsp (註冊頁)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079153184.jpg)
+
+**4-2. userRegisterSuccess.jsp (註冊成功頁)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079206587.jpg)
+
+**5. 專案結構圖**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079308256.jpg)
