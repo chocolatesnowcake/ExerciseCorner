@@ -92,7 +92,7 @@ public class UserController {
 		
 		Map<String, Object> map = new HashMap<>();
 		map.put("message", "success");
-			
+
 		ModelAndView mav = new ModelAndView("redirect:/passwordProccess", map);
 		
 		return mav;

@@ -9,6 +9,34 @@
 <meta charset="UTF-8">
 <title>註冊會員</title>
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script >
+
+        function userAccount(){
+            $.post({
+                url:"${pageContext.request.contextPath}/CheckAccountAction",
+                data:{'account':$("#account").val()},
+                success:function (data) {
+                    if (data.message=='OK'){
+                        $("#accountInfo").css("color","green");
+                    }else {
+                        $("#accountInfo").css("color","red");
+                    }
+                    $("#accountInfo").html(data.message);
+                }
+            });
+        }
+        
+        function userPassword(){
+        	var pwd = document.getElementById("password").value;
+        	if((pwd == null) || (pwd == "")){
+        		$("#password").css("color","red");
+        	}
+        	$("#passwordInfo").html("密碼為必填欄位，請輸入密碼");
+        }
+	<!-- 密碼欄位判斷參考: https://cloud.tencent.com/developer/article/1837911 -->
+    </script>
+
 <style>
 span{color:red;}
 html, body{height:100%;}
@@ -41,10 +69,11 @@ html, body{height:100%;}
 	<form action="RegisterAction" >
 	<h3>帳號密碼設定</h3>
 	
-	<span>*</span>帳號：<input type="text" name="registerParam.account" id="account" placeHolder="請輸入帳號"/> 
-	<p><span id="accountInfo">${message}</span>
+	<span>*</span>帳號：<input type="text" name="registerParam.account" id="account" onblur="userAccount()" placeHolder="請輸入帳號"/> 
+	<p><span id="accountInfo"></span>
 	
-	<p><span>*</span>密碼：<input type="text" name="registerParam.password" placeHolder="請輸入密碼"/> 
+	<p><span>*</span>密碼：<input type="text" name="registerParam.password" id="password" onblur="userPassword()" placeHolder="請輸入密碼"/> 
+	<p><span id="passwordInfo"></span>
 	
 	<h3>會員資料填寫</h3>
 	

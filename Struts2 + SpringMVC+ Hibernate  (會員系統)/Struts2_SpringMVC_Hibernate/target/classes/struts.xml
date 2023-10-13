@@ -55,10 +55,17 @@
 		    	<param name="message"></param>	
 		</action>
 		
-
+		<action name="CheckAccountAction" class="userSystem.action.CheckAccountAction">
+		<!-- 定义逻辑视图和物理资源之间的映射 -->
+		    <result name="success" type="json">
+		    	<param name="root">ajaxMessage</param>	
+		    </result>
+		    	
+		</action>
+		
 	</package>
-    
     
 </struts>
 
 <!--配置參考: https://blog.csdn.net/pan_junbiao/article/details/102658194  -->
+<!-- struts2中实现返回json格式请求: https://blog.csdn.net/feinifi/article/details/81114268 -->

@@ -73,7 +73,7 @@ html, body{height:100%;}
 <div class="vertical-center">
 	<h1>會員註冊頁面</h1>
 
-	<form:form id="registerForm" action="../user/register" modelAttribute="registerParam" method="post">
+	<form:form id="registerForm" action="register/user" modelAttribute="registerParam" method="post">
 	<h3>帳號密碼設定</h3>
 	
 	<span>*</span>帳號：<form:input type="text" path="account" name="account" id="account" onblur="userAccount()" placeHolder="請輸入帳號"/> 
