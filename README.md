@@ -10,7 +10,7 @@ https://hackmd.io/@QAg8aC4wQNm57FIDB0eiOQ/B1M1y4Bla
 
 **2. 產生成績亂數後分類。**
 
-(使用)
+
 *     90-100 → 甲、80-90 → 乙
 
 **3. 猜數字遊戲 0A0B**
@@ -77,7 +77,7 @@ String.format("%02d", 9);
 
 ---
 ## JDBC 練習
-### * CRUD
+### * 增查改刪 CRUD
 ```java
 // * Point: 連接 oracle 資料庫後，對資料進行增查改刪操作。
 // 資料庫連接操作範例 ( 示範 Read ) :
@@ -123,7 +123,7 @@ while(rs.next()) {
 * M：model 模型，負責和資料庫溝通， Model 管理的功能層被稱做「邏輯層」，更明確一點說，是和「商業邏輯」有關的功能。
 * V：view 視圖，View 所管理的功能層叫作「表現層 (presentation layer)」，顧名思義是負責管理畫面的呈現。
 * C: controller 控制器，掌握使用者互動邏輯，也是應用程式收發 request/response 的核心。來自路由的 request 會先被送到 Controller，再由 Controller 通知 Model 調度資料，並且把資料傳遞給 View 來產生樣板 (template)，並將呈現資料的 HTML 頁面回傳給客戶端。
-![](https://hackmd.io/_uploads/HyqkqOBl6.jpg)
+![](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696070107768.jpg)
  
 參考資料: https://tw.alphacamp.co/blog/mvc-model-view-controller
 
@@ -140,7 +140,7 @@ Servlet（Server Applet），全稱Java Servlet。是用Java編寫的伺服器�
 
 當客戶端發出請求時，調用 service 方法並傳遞一個請求和響應對象。Servlet首先判斷該請求是post還是get操作，然後再調用doPost和doGet方法中的一個，doPost和doGet方法都接收 HttpServletRequest 和 HttpServletResponse。
 
-參考資料: http://c.biancheng.net/servlet2/what-is-servlet.html 、
+* 參考資料: http://c.biancheng.net/servlet2/what-is-servlet.html 、
 https://medium.com/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E8%AC%9B%E5%8F%A4%E6%99%82%E9%96%93/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E8%AC%9B%E5%8F%A4%E6%99%82%E9%96%93-jsp-servlet-%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85-f6814b693b54
 
 ```java
@@ -209,18 +209,188 @@ public class InsertStudentServlet extends HttpServlet {
 #### 專案說明
 實現上萬筆隨機產生學生資料建檔，並可查詢建立的學生資料、顯示於網頁上面。
 
+* 參考資料( jsp ): https://www.runoob.com/jsp/jsp-jstl.html
+
 **1. index.jsp (首頁)**
-![](https://hackmd.io/_uploads/S1HFD9iea.jpg)
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069162806_0.jpg)
+
 **2. insertStudent.jsp (輸入數字前)**
-![](https://hackmd.io/_uploads/H1Ttvqsea.jpg)
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069186117_0.jpg)
 
 **2. insertStudent.jsp (輸入數字後)**
-![](https://hackmd.io/_uploads/HJVcD9sep.jpg)
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069202065_0.jpg)
 
 **3. showStudent.jsp (顯示資料庫已建立的資料)**
-![](https://hackmd.io/_uploads/rypcv5oga.jpg)
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1696069221027_0.jpg)
+
+---
+## Spring MVC + JDBC 練習 (會員系統)
+建立一個 MVC 架構的 web 環境，model 使用同樣的 model 層，view 頁面使用 jsp 製作 、以 Spring MVC 作為 Controller 連接 model 及 view。
 
 
 
+#### Spring MVC 概念描述
+在 Spring 的 Web MVC 框架中，擔任前端控制器角色的是 org.springframework.web.servlet.DispatcherServlet， DispatcherServlet 負責將客戶的請求分派給對應於請求的控制物件，所以使用 Spring Web MVC 的第一步，就是在 web.xml 中定義 DispatcherServlet。
 
+依下圖運作模式，front Controller會依據使用者請求URL決定處理的Controller，並回傳ModelAndView的資料，接者dispatcher Servlet藉由view Resolver與ModelAndView將頁面顯示；Bean的設定主要基於XML、Java Configuration。
 
+**Spring MVC 的運作方式**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1_TejeUv77UN6ExNQzgpKPsw.webp)
+
+* 建立SpringMVC 專案資料參考: https://dotblogs.com.tw/raylee/2019/04/15/143704#google_vignette
+* 其他資料參考: 
+https://openhome.cc/Gossip/SpringGossip/FirstSpringMVC.html 、 https://medium.com/%E5%B7%A5%E7%A8%8B%E7%8D%85%E6%97%A5%E5%B8%B8/spring-spring-mvc-spring-boot%E6%AF%94%E8%BC%83-6494107261f3 、 https://hackmd.io/@LeeLo/leelo
+
+*專案功能說明：*
+```
+1. 註冊功能
+ · Email 需做簡單驗證。
+ · 密碼需透過 MD5 加密。
+ · 帳號需透過 ajax ，於使用者註冊時判斷帳號是否重複。
+
+2. 登入功能
+ · 登入成功後需於頁面顯示使用者資料。
+
+3. 忘記密碼功能
+ · 使用者透過輸入帳號，可至註冊的信箱收取忘記密碼的信件(產生亂數密碼給使用者登入)。
+ · 使用 java Mail
+```
+
+*Controller 層代碼 (連接 Model 和 View)：*
+```java
+@RestController
+public class UserController {
+	
+	@Autowired
+	UserService userService;
+
+	@RequestMapping(value="/registerProccess", method=RequestMethod.GET)
+	public ModelAndView enterRegister(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mav = new ModelAndView("userRegister");
+		mav.addObject("userRegisterParam", new UserRegisterParam());
+		
+		return mav;
+	}	
+	
+	@RequestMapping(value="register/user", method=RequestMethod.POST)
+	public ModelAndView register(HttpServletRequest request, HttpServletResponse response, 
+			@ModelAttribute("userRegisterParam") UserRegisterParam userRegisterParam) {
+		ModelAndView mav = null;
+		
+		User user = userService.register(userRegisterParam);
+		
+		if(user != null) {
+			mav = new ModelAndView("userRegisterSuccess");
+			mav.addObject("user", user);
+		}else {
+			Map<String, Object> map = new HashMap<>();
+			map.put("message", "wrong");
+			
+			mav = new ModelAndView("redirect:/registerProccess", map);
+		}
+		return mav;
+	}
+	
+	@RequestMapping(value="/loginProccess", method=RequestMethod.GET)
+	public ModelAndView enterLogin(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mav = new ModelAndView("userLogin");
+		mav.addObject("userLoginParam", new UserLoginParam());
+		
+		return mav;
+	}
+	
+	@RequestMapping(value="login/user", method=RequestMethod.POST)
+	public ModelAndView login(HttpServletRequest request, HttpServletResponse response, 
+			@ModelAttribute("userLoginParam") UserLoginParam userLoginParam) {
+		ModelAndView mav = null;
+		
+		User user = userService.login(userLoginParam);
+		
+		if(user != null) {
+			mav = new ModelAndView("userLoginSuccess");
+			mav.addObject("user", user);
+		}else {
+			Map<String, Object> map = new HashMap<>();
+			map.put("message", "wrongPassword");
+			
+			mav = new ModelAndView("redirect:/loginProccess", map);
+		}
+		return mav;
+    }
+	
+	@RequestMapping(value="/passwordProccess", method=RequestMethod.GET)
+	public ModelAndView enterPasswordForgot(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mav = new ModelAndView("userForgotPassword");
+		mav.addObject("userForgotPasswordParam", new UserForgotPasswordParam());
+		
+		return mav;
+	}	
+	
+	@RequestMapping(value="findPassword/user", method=RequestMethod.POST)
+	public ModelAndView forgotPassword(HttpServletRequest request, HttpServletResponse response, 
+			@ModelAttribute("userForgotPasswordParam") UserForgotPasswordParam userForgotPasswordParam) {
+		
+		ModelAndView mav = new ModelAndView("userForgotPassword");
+		mav.addObject("message", "將發送新密碼至信箱，請至註冊信箱確認收件");
+		
+		userService.sendResetPasswordMail(userForgotPasswordParam);
+
+		return mav;
+	}
+	
+	@RequestMapping("/registerAccount")
+    public String registerAccount(String account){
+		String message = "";
+		
+		if(account == null | account == "") {
+			message = "帳號為必填欄位，請輸入帳號";
+			
+		}else {
+			User user = userService.checkUserAccount(account);
+			
+			if(user != null) {
+				message = "此帳號已被註冊，請輸入新帳號";
+			}else {
+				message = "OK";
+			}
+		}
+		return message;
+    }
+	
+}	
+```
+
+**1. index.jsp (首頁)**
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697078959529.jpg)
+
+**2-1. userLogin.jsp (登入頁)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697078978179.jpg)
+
+**2-2. userLoginSuccess.jsp (登入後會員資料顯示頁)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079236054.jpg)
+
+**3-1. userForgotPassword.jsp (忘記密碼頁)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079009921.jpg)
+
+**3-2. userForgotPassword.jsp (忘記密碼信件)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079095254.jpg)
+
+**4-1. userRegister.jsp (註冊頁)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079153184.jpg)
+
+**4-2. userRegisterSuccess.jsp (註冊成功頁)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079206587.jpg)
+
+**5. 專案結構圖**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697079308256.jpg)
