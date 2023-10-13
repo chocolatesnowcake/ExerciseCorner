@@ -203,6 +203,14 @@ create or replace PROCEDURE GET_DETAILS (CLASSNUM IN SCORE_DATA.CNO%TYPE)
 END GET_DETAILS;
 ```
 
+**DETAILS 表查詢結果範例**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697181510117.jpg)
+
+**LOG 表錯誤訊息範例**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697187924700.jpg)
+
 ### * TRIGGER
 #### 觸發器 Trigger 概念描述
 觸發器的定義就是說某個條件成立的時候，觸發器裡面所定義的語句就會被自動的執行。因此觸發器不需要人為的去調用，也不能調用。
@@ -274,6 +282,8 @@ BEGIN
 END ;
 ```
 
+**student_log 表操作紀錄**
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697177512482.jpg)
 
 ### * 其他練習資源
 
@@ -679,6 +689,8 @@ Struts2是一個基於MVC設計模式的Web應用框架，它本質上相當於�
 1. 同樣，配置攔截器做任何後期處理，如果需要的話。
 1. 最後的結果由視圖準備，並且將結果返回給用戶。
 
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1.png)
+
 * Struts2 操作參考: https://www.yiibai.com/struts_2/struts-2-hello-world-annotation-example.html 、 https://blog.csdn.net/qq1515312832/article/details/85253488 、 http://www.mi1k7ea.com/2020/06/27/Struts2%E5%9F%BA%E7%A1%80%E7%AF%87%E4%B9%8B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/
 
 *專案功能說明：*
@@ -807,6 +819,18 @@ public class LoginAction extends ActionSupport {
 
 * 操作參考: https://www.itread01.com/articles/1495138759.html 、  https://tw.gitbook.net/struts_2/struts-2-hello-world-example.html
 * ajax操作參考(如何使用 Struts2 回傳 json 數據): https://blog.csdn.net/feinifi/article/details/81114268
+
+**deleteAccount.jsp (刪除帳號頁面)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697101697902.jpg)
+
+**resetPassword.jsp (重設密碼頁面)**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697101714279.jpg)
+
+**專案結構圖**
+
+![image](https://github.com/chocolatesnowcake/ExerciseCorner/blob/main/%E5%9C%96%E7%89%87/1697164784519.jpg)
 
 ---
 ## Spring Boot + JPA + Vue3 練習 (會員系統)
